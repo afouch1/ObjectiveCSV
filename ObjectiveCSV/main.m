@@ -6,11 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CSVParser.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        CSVParser* parser = [[CSVParser alloc] initWithFilePath:@"/Users/afouch/Documents/Xcode Projects/ObjectiveCSV/ObjectiveCSV/test.csv"];
+        
+        NSLog(@"The parser csvTxt is %@", parser.csvText);
     }
+    
     return 0;
 }

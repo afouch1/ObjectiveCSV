@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC7C17E628949EB600AD4027 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7C17E528949EB600AD4027 /* main.m */; };
+		BC7C17F12894A85000AD4027 /* CSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7C17F02894A85000AD4027 /* CSVParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		BC7C17E228949EB600AD4027 /* ObjectiveCSV */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectiveCSV; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7C17E528949EB600AD4027 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC7C17EC2894A38400AD4027 /* CSVParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSVParser.h; sourceTree = "<group>"; };
+		BC7C17F02894A85000AD4027 /* CSVParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSVParser.m; sourceTree = "<group>"; };
+		BC7C17F22894B24E00AD4027 /* test.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				BC7C17E528949EB600AD4027 /* main.m */,
+				BC7C17EC2894A38400AD4027 /* CSVParser.h */,
+				BC7C17F02894A85000AD4027 /* CSVParser.m */,
+				BC7C17F22894B24E00AD4027 /* test.csv */,
 			);
 			path = ObjectiveCSV;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 				TargetAttributes = {
 					BC7C17E128949EB600AD4027 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -119,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7C17F12894A85000AD4027 /* CSVParser.m in Sources */,
 				BC7C17E628949EB600AD4027 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,20 +247,37 @@
 		BC7C17EA28949EB600AD4027 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVQGQSTK9Y;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCSV/ObjectiveCSV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		BC7C17EB28949EB600AD4027 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVQGQSTK9Y;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCSV/ObjectiveCSV-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
